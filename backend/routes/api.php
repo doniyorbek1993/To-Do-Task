@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::post('/users/update', 'UserController@update');
 
 Route::post('login', 'UserController@login');
 Route::post('register', 'UserController@register');
@@ -21,7 +22,6 @@ Route::group(['middleware' => ['auth:api']], function () {
     //Users
     Route::get('/users', 'UserController@index');
     Route::get('/users/show', 'UserController@show');
-    Route::post('/users/update', 'UserController@update');
     Route::delete('/users/delete/{id}', 'UserController@destroy');
 
     //Tasks
