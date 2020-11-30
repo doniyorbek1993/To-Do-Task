@@ -80,7 +80,6 @@ class UserController extends Controller
         if (!$user) {
             $user = new User();
         }
-        $user->username = $request->input('username');
         $user->name = $request->input('name');
         $user->email = $request->input('email');
         if ($request->input('password') != "") {
