@@ -161,6 +161,8 @@ export default {
             title: "Successfully registered",
           });
           this.loading = false;
+          this.loginShow = true;
+          this.registerShow = false;
         })
         .catch(function (error) {
           console.log(error);
